@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PPPKDZ2MatejLamzaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="IDStudent" />
+          </Key>
+          <Property Name="IDStudent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Prezime" Type="nvarchar" MaxLength="50" />
+          <Property Name="JMBAG" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Function Name="DeleteStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDstudent" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetAllStudents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="InsertStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Ime" Type="nvarchar" Mode="In" />
+          <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
+          <Parameter Name="JMBAG" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SelectStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDStudent" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UpdateStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDStudent" Type="int" Mode="In" />
+          <Parameter Name="Ime" Type="nvarchar" Mode="In" />
+          <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
+          <Parameter Name="JMBAG" Type="nvarchar" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="PPPKDZ2MatejLamzaModelStoreContainer">
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PPPKDZ2MatejLamzaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="IDStudent" />
+          </Key>
+          <Property Name="IDStudent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JMBAG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="PPPKDZ2MatejLamzaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Students" EntityType="Self.Student" />
+          <FunctionImport Name="DeleteStudent">
+            <Parameter Name="IDstudent" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetAllStudents" ReturnType="Collection(PPPKDZ2MatejLamzaModel.GetAllStudents_Result)" />
+          <FunctionImport Name="InsertStudent">
+            <Parameter Name="Ime" Mode="In" Type="String" />
+            <Parameter Name="Prezime" Mode="In" Type="String" />
+            <Parameter Name="JMBAG" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SelectStudent" ReturnType="Collection(PPPKDZ2MatejLamzaModel.SelectStudent_Result)">
+            <Parameter Name="IDStudent" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateStudent">
+            <Parameter Name="IDStudent" Mode="In" Type="Int32" />
+            <Parameter Name="Ime" Mode="In" Type="String" />
+            <Parameter Name="Prezime" Mode="In" Type="String" />
+            <Parameter Name="JMBAG" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="GetAllStudents_Result">
+          <Property Type="Int32" Name="IDStudent" Nullable="false" />
+          <Property Type="String" Name="Ime" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Prezime" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="JMBAG" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="SelectStudent_Result">
+          <Property Type="Int32" Name="IDStudent" Nullable="false" />
+          <Property Type="String" Name="Ime" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Prezime" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="JMBAG" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PPPKDZ2MatejLamzaModelStoreContainer" CdmEntityContainer="PPPKDZ2MatejLamzaEntities">
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="PPPKDZ2MatejLamzaModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="IDStudent" ColumnName="IDStudent" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="JMBAG" ColumnName="JMBAG" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="DeleteStudent" FunctionName="PPPKDZ2MatejLamzaModel.Store.DeleteStudent" />
+          <FunctionImportMapping FunctionImportName="GetAllStudents" FunctionName="PPPKDZ2MatejLamzaModel.Store.GetAllStudents">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPPKDZ2MatejLamzaModel.GetAllStudents_Result">
+                <ScalarProperty Name="IDStudent" ColumnName="IDStudent" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="JMBAG" ColumnName="JMBAG" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="InsertStudent" FunctionName="PPPKDZ2MatejLamzaModel.Store.InsertStudent" />
+          <FunctionImportMapping FunctionImportName="SelectStudent" FunctionName="PPPKDZ2MatejLamzaModel.Store.SelectStudent">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPPKDZ2MatejLamzaModel.SelectStudent_Result">
+                <ScalarProperty Name="IDStudent" ColumnName="IDStudent" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="JMBAG" ColumnName="JMBAG" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UpdateStudent" FunctionName="PPPKDZ2MatejLamzaModel.Store.UpdateStudent" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

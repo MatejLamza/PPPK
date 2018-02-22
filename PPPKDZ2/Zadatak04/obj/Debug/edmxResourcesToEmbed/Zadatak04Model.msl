@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PPPKDZ2MatejLamzaModelStoreContainer" CdmEntityContainer="PPPKDZ2MatejLamzaEntities">
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="PPPKDZ2MatejLamzaModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="IDStudent" ColumnName="IDStudent" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="JMBAG" ColumnName="JMBAG" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DeleteStudent" FunctionName="PPPKDZ2MatejLamzaModel.Store.DeleteStudent" />
+    <FunctionImportMapping FunctionImportName="GetAllStudents" FunctionName="PPPKDZ2MatejLamzaModel.Store.GetAllStudents">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PPPKDZ2MatejLamzaModel.GetAllStudents_Result">
+          <ScalarProperty Name="IDStudent" ColumnName="IDStudent" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="JMBAG" ColumnName="JMBAG" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertStudent" FunctionName="PPPKDZ2MatejLamzaModel.Store.InsertStudent" />
+    <FunctionImportMapping FunctionImportName="SelectStudent" FunctionName="PPPKDZ2MatejLamzaModel.Store.SelectStudent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PPPKDZ2MatejLamzaModel.SelectStudent_Result">
+          <ScalarProperty Name="IDStudent" ColumnName="IDStudent" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="JMBAG" ColumnName="JMBAG" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateStudent" FunctionName="PPPKDZ2MatejLamzaModel.Store.UpdateStudent" />
+  </EntityContainerMapping>
+</Mapping>

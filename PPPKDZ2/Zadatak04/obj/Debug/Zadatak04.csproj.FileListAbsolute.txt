@@ -1,0 +1,14 @@
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\bin\Debug\Zadatak04.exe.config
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\bin\Debug\Zadatak04.exe
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\bin\Debug\Zadatak04.pdb
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\bin\Debug\EntityFramework.dll
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\bin\Debug\EntityFramework.SqlServer.dll
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\bin\Debug\EntityFramework.xml
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\bin\Debug\EntityFramework.SqlServer.xml
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\obj\Debug\Zadatak04.csprojResolveAssemblyReference.cache
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\obj\Debug\Zadatak04.Form1.resources
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\obj\Debug\Zadatak04.Properties.Resources.resources
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\obj\Debug\Zadatak04.csproj.GenerateResource.Cache
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\obj\Debug\Zadatak04.csproj.CoreCompileInputs.cache
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\obj\Debug\Zadatak04.exe
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak04\obj\Debug\Zadatak04.pdb

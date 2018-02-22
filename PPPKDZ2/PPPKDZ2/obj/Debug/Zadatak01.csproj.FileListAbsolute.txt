@@ -1,0 +1,10 @@
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\PPPKDZ2\bin\Debug\PPPKDZ2.exe.config
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\PPPKDZ2\bin\Debug\PPPKDZ2.exe
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\PPPKDZ2\bin\Debug\PPPKDZ2.pdb
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\PPPKDZ2\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\PPPKDZ2\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\PPPKDZ2\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\PPPKDZ2\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\PPPKDZ2\obj\Debug\Zadatak01.csproj.CoreCompileInputs.cache
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\PPPKDZ2\obj\Debug\PPPKDZ2.exe
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\PPPKDZ2\obj\Debug\PPPKDZ2.pdb

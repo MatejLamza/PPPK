@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PPPKDZ2MatejLamzaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="IDStudent" />
+    </Key>
+    <Property Name="IDStudent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prezime" Type="nvarchar" MaxLength="50" />
+    <Property Name="JMBAG" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Function Name="DeleteStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDstudent" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetAllStudents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="InsertStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
+    <Parameter Name="JMBAG" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SelectStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDStudent" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDStudent" Type="int" Mode="In" />
+    <Parameter Name="Ime" Type="nvarchar" Mode="In" />
+    <Parameter Name="Prezime" Type="nvarchar" Mode="In" />
+    <Parameter Name="JMBAG" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="PPPKDZ2MatejLamzaModelStoreContainer">
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,7 @@
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak03\bin\Debug\Zadatak03.exe.config
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak03\bin\Debug\Zadatak03.exe
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak03\bin\Debug\Zadatak03.pdb
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak03\obj\Debug\Zadatak03.csprojResolveAssemblyReference.cache
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak03\obj\Debug\Zadatak03.csproj.CoreCompileInputs.cache
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak03\obj\Debug\Zadatak03.exe
+E:\Programiranje\PPPK\DZ2\PPPKDZ2\Zadatak03\obj\Debug\Zadatak03.pdb

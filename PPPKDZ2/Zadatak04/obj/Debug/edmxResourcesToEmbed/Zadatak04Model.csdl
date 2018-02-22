@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PPPKDZ2MatejLamzaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="IDStudent" />
+    </Key>
+    <Property Name="IDStudent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="JMBAG" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="PPPKDZ2MatejLamzaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <FunctionImport Name="DeleteStudent">
+      <Parameter Name="IDstudent" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllStudents" ReturnType="Collection(PPPKDZ2MatejLamzaModel.GetAllStudents_Result)" />
+    <FunctionImport Name="InsertStudent">
+      <Parameter Name="Ime" Mode="In" Type="String" />
+      <Parameter Name="Prezime" Mode="In" Type="String" />
+      <Parameter Name="JMBAG" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SelectStudent" ReturnType="Collection(PPPKDZ2MatejLamzaModel.SelectStudent_Result)">
+      <Parameter Name="IDStudent" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateStudent">
+      <Parameter Name="IDStudent" Mode="In" Type="Int32" />
+      <Parameter Name="Ime" Mode="In" Type="String" />
+      <Parameter Name="Prezime" Mode="In" Type="String" />
+      <Parameter Name="JMBAG" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetAllStudents_Result">
+    <Property Type="Int32" Name="IDStudent" Nullable="false" />
+    <Property Type="String" Name="Ime" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JMBAG" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="SelectStudent_Result">
+    <Property Type="Int32" Name="IDStudent" Nullable="false" />
+    <Property Type="String" Name="Ime" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="JMBAG" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+  </ComplexType>
+</Schema>
